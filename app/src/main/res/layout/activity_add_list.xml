@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddList"
+    android:padding="20dp"
+    >
+
+    <EditText
+        android:id="@+id/taskEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/startDateEdit"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter start date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskEdit"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:id="@+id/endDateEdit"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter end date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startDateEdit"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/calendarStart"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="@+id/taskEdit"
+        app:layout_constraintTop_toBottomOf="@+id/taskEdit"
+        tools:srcCompat="@drawable/ic_baseline_calendar_month_24"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <ImageButton
+        android:id="@+id/calendarEnd"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="@id/calendarStart"
+        app:layout_constraintTop_toBottomOf="@id/calendarStart"
+        tools:srcCompat="@drawable/ic_baseline_calendar_month_24" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/endDateEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="ADD TASK"
+        android:textSize="20sp"
+        android:background="@color/purple_200"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "110088967992",
+    "firebase_url": "https://vidupload-1308a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "vidupload-1308a",
+    "storage_bucket": "vidupload-1308a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110088967992:android:646ab6091bb7cb082213cd",
+        "android_client_info": {
+          "package_name": "com.assignment.projekfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABUT4oZt5LjMmygyn_CF3EkNOwQn7yTjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110088967992:android:d78ac0bce60655c82213cd",
+        "android_client_info": {
+          "package_name": "com.assignment.todolistrecycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABUT4oZt5LjMmygyn_CF3EkNOwQn7yTjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110088967992:android:efc4366417e4d7492213cd",
+        "android_client_info": {
+          "package_name": "com.assignment.viduload"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABUT4oZt5LjMmygyn_CF3EkNOwQn7yTjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110088967992-ccb90h7f7cadg5209kc07qo0efitv67o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
