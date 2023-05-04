@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -35,7 +34,7 @@ public class UpdateTask extends AppCompatActivity {
         Intent intent = getIntent();
 
         taskTxt = findViewById(R.id.taskEdit);
-        startDate = findViewById(R.id.startDateEdit);
+        startDate = findViewById(R.id.endDateEdit);
         updBtn = findViewById(R.id.updateBtn);
         dltBtn = findViewById(R.id.deleteBtn);
 
