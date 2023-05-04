@@ -41,8 +41,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.TaskViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.TaskViewHolder holder, int position) {
         Task task = taskList.get(position);
-        holder.task.setText(taskList.get(position).getTask());
-        holder.startDate.setText(taskList.get(position).getStartDate());
+        holder.task.setText("Task: " + taskList.get(position).getTask());
+        holder.startDate.setText("End date: " + taskList.get(position).getStartDate());
     }
 
     @Override
