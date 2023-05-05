@@ -43,11 +43,11 @@ public class AddList extends AppCompatActivity {
     MediaController mediaController;
 
     DatabaseReference dbRef;
-    StorageReference storageReference;
+    StorageReference storageReference, videoRef;
 
     Calendar calendar;
     Uri vidUri;
-    String timeStamp, fileName;
+    String timeStamp, fileName,uniqID="";
     int randomNumber;
 
     DatePickerDialog.OnDateSetListener setCalendarListener;
@@ -106,6 +106,13 @@ public class AddList extends AppCompatActivity {
                 chooseVideo(view);
             }
         });
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadDb();
+            }
+        });
     }
 
     @Override
@@ -126,14 +133,8 @@ public class AddList extends AppCompatActivity {
                 videoView.start();
             }
             // Create a reference to the video file in Firebase Storage
-            StorageReference videoRef = storageReference.child("videos/"+fileName);
+            videoRef = storageReference.child("videos/"+fileName);
 
-            addBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    uploadDb(videoRef);
-                }
-            });
         }
         else if(resultCode==RESULT_CANCELED) {
             Toast.makeText(this, "Video selection canceled", Toast.LENGTH_SHORT).show();
@@ -147,15 +148,13 @@ public class AddList extends AppCompatActivity {
         startActivityForResult(intent, PICK_VIDEO);
     }
 
-    private void uploadDb(StorageReference videoRef) {
+    private void uploadDb() {
         Task taskList = new Task(task.getText().toString().trim(), startDate.getText().toString().trim());
-        //Task taskList = new Task(task.getText().toString().trim(), startDate.getText().toString().trim(), uniqID);
-
-        String uniqID="";
 
         if(!TextUtils.isEmpty(task.getText().toString())) {
             dbRef.push().setValue(taskList);
             uniqID = dbRef.push().getKey();
+            Toast.makeText(AddList.this, "Task uploaded", Toast.LENGTH_LONG).show();
 
             task.setText("");
             startDate.setText("");
@@ -164,7 +163,7 @@ public class AddList extends AppCompatActivity {
             Toast.makeText(this, "Don't leave the task empty", Toast.LENGTH_SHORT).show();
 
         if(videoView.isPlaying()){
-// Upload the video file to Firebase Storage
+            // Upload the video file to Firebase Storage
             UploadTask uploadTask = videoRef.putFile(vidUri);
             String finalUniqID = uniqID;
             uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {

@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.TaskViewHolder> {
 
     @NonNull
     @Override
-    public TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyAdapter.TaskViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View task_row=  LayoutInflater.from(context).inflate(R.layout.list_row,parent,false);
         return new TaskViewHolder(task_row);
     }
@@ -63,16 +63,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.TaskViewHolder> {
 
         @Override
         public void onClick(View view) {
-
-            //String idTask = taskList.get(getAdapterPosition()).getTask();
-            //String idTask = ((Activity)view.getContext()).getIntent().getStringExtra("uniqueID");
             Intent intent = new Intent(view.getContext(), UpdateTask.class);
             intent.putExtra("task", taskList.get(getAdapterPosition()).getTask());
             intent.putExtra("startDate", taskList.get(getAdapterPosition()).getStartDate());
             intent.putExtra("idTask", taskList.get(getAdapterPosition()).getIdTask());
 
             view.getContext().startActivity(intent);
-
         }
     }
 }
